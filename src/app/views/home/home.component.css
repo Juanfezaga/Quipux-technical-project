@@ -1,0 +1,27 @@
+#home-title {
+  font-size: 4.5rem;
+}
+
+#home-card__title {
+  color: var(--blue-900);
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+#home-card__container {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+#card-body__title{
+  color: var(--blue-900);
+}
+
+#home-services__container {
+  height: auto;
+  width: auto;
+  background-image: url("/assets/resource-1.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center 10px;
+}

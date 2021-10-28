@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+  <div class="container-fluid align-items-center">
+    <a routerLink="/" style="cursor: pointer" class="navbar-brand" [ngClass]="{ 'd-none': !brand }">
+      <img src="/assets/logo.png" alt="Logo" />
+    </a>
+    <nav aria-label="breadcrumb" class="d-flex align-items-center h-100" id="breadcrumb-navbar" [ngClass]="{ 'd-none': brand }">
+      <ol class="breadcrumb align-items-center">
+        <li>
+          <i routerLink="/" style="cursor: pointer" class="bi bi-house-door fs-2"></i>
+        </li>
+        <li
+          class="breadcrumb-item text-capitalize fs-5"
+          [ngClass]="{
+            'active fw-bold active-url__breadCrumb': decomposeUrl.indexOf(url) === decomposeUrl.length - 1
+          }"
+          *ngFor="let url of decomposeUrl"
+        >
+          {{ url }}
+        </li>
+      </ol>
+    </nav>
+    <div class="d-flex align-items-center">
+      <i class="bi bi-person-circle fs-1 pe-2"></i>
+      <button class="btn btn-light" type="button">
+        <span class="fw-bold mh-2">Usuario Apellido</span>
+        <i class="bi bi-chevron-down fs-7"></i>
+      </button>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,169 @@
+<div
+  class="d-flex flex-column flex-shrink-0 h-100 bg-dark"
+  id="sidebar-container"
+>
+  <a
+    role="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#sidebarOffcanvas"
+    class="d-block p-3 link-light text-decoration-none text-center"
+  >
+    <i
+      class="bi bi-list fs-1"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#sidebarOffcanvas"
+    ></i>
+  </a>
+  <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+    <li routerLink="/empresas/nombre-empresa" class="nav-item pb-2">
+      <a
+        [ngClass]="{
+          'active-sidebar__link ': isActive === '/empresas/nombre-empresa'
+        }"
+        class="nav-link py-3"
+        title="Empresas"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+        data-bs-original-title="Empresas"
+      >
+        <i class="bi bi-archive link-light fs-2"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        [ngClass]="{
+          'active-sidebar__link ': isActive === '/articulos/articulo'
+        }"
+        class="nav-link py-3"
+        routerLink="/articulos/articulo"
+        title="Articulos"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+      >
+        <i class="bi bi-file-earmark-text link-light fs-2"></i>
+      </a>
+    </li>
+  </ul>
+  <div
+    class="offcanvas offcanvas-start bg-dark text-white"
+    data-bs-scroll="true"
+    data-bs-backdrop="false"
+    tabindex="-1"
+    id="sidebarOffcanvas"
+    aria-labelledby="sidebarOffcanvasLabel"
+  >
+    <div class="offcanvas-header d-flex justify-between">
+      <a data-bs-dismiss="offcanvas">
+        <i class="bi bi-list fs-1"></i>
+      </a>
+      <h5 class="offcanvas-title fs-1" id="sidebarOffcanvasLabel">
+        <img src="/assets/Logo-Quipux-Global.png" alt="logo" />
+      </h5>
+    </div>
+    <div class="offcanvas-body">
+      <!-- <div>
+      Some text as placeholder. In real life you can have the elements you have
+      chosen. Like, text, images, lists, etc.
+    </div>
+     -->
+      <ul class="nav nav-flush flex-column">
+        <li class="nav-item">
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#enterpriseCollapse"
+            class="
+              sidebarMenu-option__link
+              fw-light
+              w-100
+              d-inline-flex
+              align-items-center
+            "
+          >
+            <i class="bi bi-archive fs-3 col-1"></i>
+            <span class="col-10">EMPRESAS</span>
+            <i class="col-1 bi bi-chevron-down"></i>
+          </button>
+          <div class="collapse" id="enterpriseCollapse">
+            <div class="card card-body bg-dark d-inline-block">
+              <a
+                routerLink="/empresas/nombre-empresa"
+                class="
+                  collapsed-option
+                  nav-link
+                  text-decoration-none text-white
+                  fs-6
+                "
+                >Empresas</a
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#articlesCollapse"
+            class="
+              sidebarMenu-option__link
+              fw-light
+              w-100
+              d-inline-flex
+              align-items-center
+            "
+          >
+            <i class="bi bi-file-earmark-text fs-3 col-1"></i>
+            <span class="col-10">ARTICULOS</span>
+            <i class="col-1 bi bi-chevron-down"></i>
+          </button>
+          <div class="collapse" id="articlesCollapse">
+            <div class="card card-body bg-dark d-inline-block">
+              <a
+                routerLink="/articulos/articulo"
+                class="
+                  collapsed-option
+                  nav-link
+                  text-decoration-none text-white
+                  fs-6
+                "
+                >Articulo</a
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#colaboratorsCollapse"
+            class="
+              sidebarMenu-option__link
+              fw-light
+              w-100
+              d-inline-flex
+              align-items-center
+            "
+          >
+            <i class="bi bi-person-fill fs-3 col-1"></i>
+            <span class="col-10">COLABORADORES</span>
+            <i class="col-1 bi bi-chevron-down"></i>
+          </button>
+          <div class="collapse" id="colaboratorsCollapse">
+            <div class="card card-body bg-dark d-inline-block">
+              <a
+                routerLink="/"
+                class="
+                  collapsed-option
+                  nav-link
+                  text-decoration-none text-white
+                  fs-6
+                "
+                >Inicio</a
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

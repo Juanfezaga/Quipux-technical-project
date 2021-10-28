@@ -1,0 +1,45 @@
+#sidebar-container{
+  width: 4.5rem;
+}
+
+a{
+  cursor: pointer;
+}
+
+.active-sidebar__link {
+  animation-name: to-inside;
+  animation-duration: 2s;
+  background-color: var(--active-link);
+}
+
+.sidebarMenu-option__link{
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 16px 0;
+}
+
+.sidebarMenu-option__link.collapsed{
+  color: white;
+}
+
+.sidebarMenu-option__link[aria-expanded="true"]{
+  color: var(--active-link);
+}
+
+.collapsed-option::before{
+  content: "";
+  background-color: var(--gray-500);
+  margin-bottom: 16px;
+  width: 5px;
+  height: 5px;
+}
+
+@keyframes to-inside {
+  from {
+    scale: (0.5);
+  }
+  to{
+    scale: (1);
+  }
+}

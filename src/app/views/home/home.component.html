@@ -1,0 +1,147 @@
+<div class="d-flex flex-row h-100">
+  <app-sidebar></app-sidebar>
+  <div class="w-100 d-flex flex-column">
+    <app-navbar [brand]="hasBrand"></app-navbar>
+    <div class="container-fluid w-100 h-100 bg-light">
+      <div class="row h-100">
+        <div
+          class="col-sm-12 col-6 w-50 d-flex flex-column justify-content-around"
+        >
+          <h1 class="text-primary ps-5 mt-5" id="home-title">
+            ¿Que quieres buscar?
+          </h1>
+          <div class="container">
+            <h6>Encuentra la informacion que deseas consultar...</h6>
+            <div class="d-flex flex-row w-100 mt-3">
+              <div class="dropdown input-group flex-nowrap w-100">
+                <button
+                  class="
+                    btn btn-outline-primary
+                    input-group-text
+                    dropdown-toggle
+                  "
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Todos los servicios
+                </button>
+                <input
+                  type="text"
+                  class="w-75"
+                  placeholder="Que servicio quieres consultar"
+                />
+                <span class="btn btn-primary input-group-text rounded-end">
+                  <i class="bi bi-search fs-4"></i>
+                </span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Servicio 1</a></li>
+                  <li><a class="dropdown-item" href="#">Servicio 2</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Todos lo servicios</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow-sm container">
+            <div class="card-body row">
+              <div class="col d-flex justify-content-around flex-column">
+                <span class="fw-bold text-primary fs-5">Certificado</span>
+                <p>Conoce los beneficios que tenemos para ti al registrarte</p>
+                <button class="btn btn-outline-success w-100">
+                  + beneficios
+                </button>
+              </div>
+              <div class="col d-flex justify-content-around flex-column">
+                <span class="fw-bold text-primary fs-5">Crear cuenta</span>
+                <p>Conoce los beneficios que tenemos para ti al registrarte</p>
+                <button class="btn btn-outline-success w-100">Ver todo</button>
+              </div>
+              <div class="col d-flex justify-content-around flex-column">
+                <span class="fw-bold text-primary fs-5">Top trámites</span>
+                <p>Conoce los trámites más solicitados</p>
+                <button class="btn btn-outline-success w-100">Ver todo</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 d-md-none d-sm-block"></div>
+        <div
+          class="
+            col-sm-12 col-6
+            h-100
+            w-50
+            d-flex
+            flex-column
+            justify-content-center
+            align-items-center
+          "
+        >
+          <div
+            class="
+              container-fluid
+              w-50
+              h-75
+              position-relative
+              d-flex
+              flex-column
+              justify-content-around
+            "
+            id="home-services__container"
+          >
+            <div id="home-card__container">
+              <h1 id="home-card__title">SERVICIOS QUIPUX</h1>
+            </div>
+            <div
+              class="
+                card
+                position-absolute
+                shadow-sm
+                w-100
+                bottom-0
+                h-auto
+                max-h-50
+                border
+                border-4
+                border-primary
+                border-top-0
+                border-bottom-0
+                border-end-0
+              "
+            >
+              <div class="card-body ps-4">
+                <h4 id="card-body__title">Trámites en tu mano</h4>
+                <p>
+                  Ahora podrás hacer todos tus trámites desde la comodidad de tu
+                  casa, desde cualquier dispositivo computadora, tablet o movil.
+                </p>
+                <div class="d-inline-flex flex-row align-items-center w-100 mb-1 pb-1 fw-bold">
+                  <1/4>
+                  <div class="progress w-100" style="height: 5px">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 25%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="/assets/logo.png"
+        width="150"
+        height="auto"
+        alt="logo"
+        class="position-absolute bottom-0 start-50 translate-middle-x"
+      />
+    </div>
+  </div>
+</div>

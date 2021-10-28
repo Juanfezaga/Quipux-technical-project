@@ -1,0 +1,16 @@
+.active-url__breadCrumb{
+  color: #0dcaf0 ;
+  font-weight: bold;
+  position: relative;
+}
+
+.active-url__breadCrumb::after{
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 15px;
+  top: 50px;
+  font-weight: 1000;
+  width: 100%;
+  border-bottom: 7px solid #0dcaf0;
+}
